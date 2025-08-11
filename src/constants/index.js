@@ -47,7 +47,8 @@ import {
   finxtapp,
   Spotify,
   blogapp,
-  stockpriceproject
+  stockpriceproject,
+  FinxtAPP
 } from '../assets';
 
 export const navLinks = [
@@ -112,34 +113,71 @@ const technologies = [
 ];
 
 
+// const experiences = [
+//   {
+//     title: 'Front-End Developer',
+//     company_name: 'Cover Hunt',
+//     icon: coverhunt,
+//     iconBg: '#333333',
+//     date: 'Aug 2021 - Feb 2022',
+//   },
+//   {
+//     title: 'Mentor (Volunteer)',
+//     company_name: 'Microverse',
+//     icon: microverse,
+//     iconBg: '#333333',
+//     date: 'Mar 2022 - May 2022',
+//   },
+//   {
+//     title: 'Junior Software Engineer',
+//     company_name: 'Kelhel',
+//     icon: kelhel,
+//     iconBg: '#333333',
+//     date: 'May 2022 - Oct 2022',
+//   },
+//   {
+//     title: 'Full Stack Developer',
+//     company_name: 'Diversity Cyber Council',
+//     icon: dcc,
+//     iconBg: '#333333',
+//     date: 'Sep 2022 - Present',
+//   },
+// ];
 const experiences = [
   {
-    title: 'Front-End Developer',
-    company_name: 'Cover Hunt',
-    icon: coverhunt,
+    title: 'State & National Level Hackathon Participant',
+    company_name: 'FedexHackathon (IIT Madras - AIR 5) | SIH (AIR 6) | Finalist - GECA Hackathon',
+    icon: coverhunt, // replace with actual icon import
     iconBg: '#333333',
-    date: 'Aug 2021 - Feb 2022',
+    date: '2023 - 2024',
   },
   {
-    title: 'Mentor (Volunteer)',
-    company_name: 'Microverse',
-    icon: microverse,
+    title: 'College Major Project in Machine Learning',
+    company_name: 'Category: Recommendation | Detection | Classification | Identification',
+    icon: microverse, // replace with actual icon import
     iconBg: '#333333',
-    date: 'Mar 2022 - May 2022',
+    date: '2024',
   },
   {
-    title: 'Junior Software Engineer',
-    company_name: 'Kelhel',
-    icon: kelhel,
+    title: 'Frontend Developer Intern',
+    company_name: 'SPINACHO COMPANY',
+    icon: kelhel, // replace with actual icon import
     iconBg: '#333333',
-    date: 'May 2022 - Oct 2022',
+    date: '2024',
   },
   {
     title: 'Full Stack Developer',
-    company_name: 'Diversity Cyber Council',
-    icon: dcc,
+    company_name: 'SPINACHO COMPANY',
+    icon: dcc, // replace with actual icon import
     iconBg: '#333333',
-    date: 'Sep 2022 - Present',
+    date: '2024',
+  },
+  {
+    title: 'Freelance Project Developer',
+    company_name: 'U.S.-Based Client - Finxtapp Platform',
+    icon: FinxtAPP, // replace with actual icon import
+    iconBg: '#333333',
+    date: '2024',
   },
 ];
 

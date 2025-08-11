@@ -58,6 +58,7 @@ import coverhunt from './company/coverhunt.png';
 import dcc from './company/dcc.png';
 import kelhel from './company/kelhel.png';
 import microverse from './company/microverse.png';
+import FinxtAPP from './company/FinxtAPP.png';
 
 import komikult from './projects/komikult.png';
 import leaderboard from './projects/leaderboard.png';
@@ -71,6 +72,7 @@ import Spotify from './projects/Spotify.png';
 import blogapp from './projects/blogapp.png';
 import stockpriceproject from './projects/stockpriceproject.png';
 export {
+  FinxtAPP,
   stockpriceproject,
   blogapp,
   Spotify,

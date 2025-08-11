@@ -23,7 +23,7 @@ const ExperienceCard = ({ experience }) => (
     }}
     date={
       <div>
-        <h3 className="text-dim text-[18px] font-bold font-beckman">
+        <h3 className="font-beckman font-bold text-[18px] text-dim">
           {experience.date}
         </h3>
       </div>
@@ -39,11 +39,11 @@ const ExperienceCard = ({ experience }) => (
       </div>
     }>
     <div>
-      <h3 className="text-jetLight text-[24px] font-bold font-beckman tracking-[2px]">
+      <h3 className="font-beckman font-bold text-[24px] text-jetLight tracking-[2px]">
         {experience.title}
       </h3>
       <p
-        className="text-taupe text-[22px] font-semibold font-overcameBold tracking-[1px]"
+        className="font-sans font-semibold text-[22px] text-taupe tracking-[1px]"
         style={{ margin: 0 }}>
         {experience.company_name}
       </p>
@@ -63,7 +63,7 @@ const Experience = () => {
         </h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-col">
+      <div className="flex flex-col mt-20">
         <VerticalTimeline className="vertical-timeline-custom-line">
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
@@ -92,17 +92,10 @@ const Experience = () => {
               </div>
             }>
             <button
-              className="live-demo flex justify-between 
-              sm:text-[18px] text-[14px] text-timberWolf 
-              font-bold font-beckman items-center py-5 pl-3 pr-3 
-              whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
-              w-[125px] h-[46px] rounded-[10px] bg-jetLight 
-              sm:mt-[22px] mt-[16px] hover:bg-battleGray 
-              hover:text-eerieBlack transition duration-[0.2s] 
-              ease-in-out"
+              className="flex justify-between items-center gap-1 bg-jetLight hover:bg-battleGray mt-[16px] sm:mt-[22px] py-5 pr-3 pl-3 rounded-[10px] w-[125px] sm:w-[148px] h-[46px] sm:h-[58px] font-beckman font-bold text-[14px] text-timberWolf sm:text-[18px] hover:text-eerieBlack whitespace-nowrap transition duration-[0.2s] ease-in-out live-demo"
               onClick={() =>
                 window.open(
-                  'resume link', //paste the link to your resume here
+                  'https://drive.google.com/file/d/1PJoPfiyZhtIFuHashZ3zZgozt0Jn2Iw7/view?usp=sharing', //paste the link to your resume here
                   '_blank'
                 )
               }
@@ -120,8 +113,7 @@ const Experience = () => {
               <img
                 src={download}
                 alt="download"
-                className="download-btn sm:w-[26px] sm:h-[26px] 
-                w-[23px] h-[23px] object-contain"
+                className="w-[23px] sm:w-[26px] h-[23px] sm:h-[26px] object-contain download-btn"
               />
             </button>
           </VerticalTimelineElement>

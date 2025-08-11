@@ -9,7 +9,7 @@ const ServiceCard = ({ index, title, icon }) => {
   return (
     <motion.div
       variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
-      className="shadow-card p-[1px] rounded-[20px] w-full xs:w-[250px] card-gradient">
+      className="p-[1px] rounded-[20px] w-full xs:w-[250px] card-gradient">
       <div
         options={{
           max: 45,

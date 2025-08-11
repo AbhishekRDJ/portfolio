@@ -4,6 +4,7 @@ import whiteabstract from './backgrounds/white-abstract.png';
 import worldmap from './backgrounds/world-map.png';
 
 import logo from './logo/logo-black.png';
+import Logo from './logo/Logo.png';
 import logotext from './logo/logo-text-black.png';
 
 import shaq from './personal/shaq.png';
@@ -64,8 +65,19 @@ import math from './projects/math-magicians.png';
 import movie from './projects/movie-metro.png';
 import nyeusi from './projects/nyeusi.png';
 import space from './projects/space-hub.png';
+import GradeVise from './projects/GradeVise.png';
+import finxtapp from './projects/finxtapp.png';
+import Spotify from './projects/Spotify.png';
+import blogapp from './projects/blogapp.png';
+import stockpriceproject from './projects/stockpriceproject.png';
 export {
+  stockpriceproject,
+  blogapp,
+  Spotify,
+  finxtapp,
+  Logo,
   bwmap,
+  GradeVise,
   nairobi,
   whiteabstract,
   worldmap,

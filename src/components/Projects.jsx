@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
-import { github, pineapple, pineappleHover } from '../assets';
+import { github, pineapple, pineappleHover, } from '../assets';
 import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
 
@@ -20,42 +20,34 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-      className={`relative ${
-        active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
-      } flex items-center justify-center min-w-[170px] 
+      className={`relative ${active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
+        } flex items-center justify-center min-w-[170px] 
       h-[420px] cursor-pointer card-shadow`}
       onClick={() => handleClick(id)}>
       <div
-        className="absolute top-0 left-0 z-10 bg-jetLight 
-      h-full w-full opacity-[0.5] rounded-[24px]"></div>
+        className="top-0 left-0 z-10 absolute bg-jetLight opacity-[0.5] rounded-[24px] w-full h-full"></div>
 
       <img
         src={image}
         alt={name}
-        className="absolute w-full h-full object-cover rounded-[24px]"
+        className="absolute rounded-[24px] w-full h-full object-cover"
       />
 
       {active !== id ? (
-        <div className="flex items-center justify-start pr-[4.5rem]">
+        <div className="flex justify-start items-center pr-[4.5rem]">
           <h3
-            className="font-extrabold font-beckman uppercase w-[200px] h-[30px] 
-        whitespace-nowrap sm:text-[27px] text-[18px] text-timberWolf tracking-[1px]
-        absolute z-0 lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
-        leading-none z-20">
+            className="lg:bottom-[7rem] z-0 z-20 absolute w-[200px] h-[30px] font-beckman font-extrabold text-[18px] text-timberWolf sm:text-[27px] uppercase leading-none tracking-[1px] whitespace-nowrap lg:rotate-[-90deg] lg:origin-[0,0]">
             {name}
           </h3>
         </div>
       ) : (
         <>
           <div
-            className="absolute bottom-0 p-8 justify-start w-full 
-            flex-col bg-[rgba(122,122,122,0.5)] rounded-b-[24px] z-20">
+            className="bottom-0 z-20 absolute flex-col justify-start bg-[rgba(0,0,0,0.5)] p-8 rounded-b-[24px] w-full">
             <div className="absolute inset-0 flex justify-end m-3">
               <div
                 onClick={() => window.open(repo, '_blank')}
-                className="bg-night sm:w-11 sm:h-11 w-10 h-10 rounded-full 
-                  flex justify-center items-center cursor-pointer
-                  sm:opacity-[0.9] opacity-[0.8]">
+                className="flex justify-center items-center bg- opacity-[0.8] sm:opacity-[0.9] rounded-full w-10 sm:w-11 h-10 sm:h-11 cursor-pointer">
                 <img
                   src={github}
                   alt="source code"
@@ -65,25 +57,15 @@ const ProjectCard = ({
             </div>
 
             <h2
-              className="font-bold sm:text-[32px] text-[24px] 
-              text-timberWolf uppercase font-beckman sm:mt-0 -mt-[1rem]">
+              className="-mt-[1rem] sm:mt-0 font-beckman font-bold text-[24px] text-timberWolf sm:text-[32px] uppercase">
               {name}
             </h2>
             <p
-              className="text-silver sm:text-[14px] text-[12px] 
-              max-w-3xl sm:leading-[24px] leading-[18px]
-              font-poppins tracking-[1px]">
+              className="max-w-3xl font-poppins text-[12px] text-silver sm:text-[14px] leading-[18px] sm:leading-[24px] tracking-[1px]">
               {description}
             </p>
             <button
-              className="live-demo flex justify-between 
-              sm:text-[16px] text-[14px] text-timberWolf 
-              font-bold font-beckman items-center py-5 pl-2 pr-3 
-              whitespace-nowrap gap-1 sm:w-[138px] sm:h-[50px] 
-              w-[125px] h-[46px] rounded-[10px] glassmorphism 
-              sm:mt-[22px] mt-[16px] hover:bg-battleGray 
-              hover:text-eerieBlack transition duration-[0.2s] 
-              ease-in-out"
+              className="flex justify-between items-center gap-1 hover:bg-battleGray mt-[16px] sm:mt-[22px] py-5 pr-3 pl-2 rounded-[10px] w-[125px] sm:w-[138px] h-[46px] sm:h-[50px] font-beckman font-bold text-[14px] text-timberWolf sm:text-[16px] hover:text-eerieBlack whitespace-nowrap transition duration-[0.2s] ease-in-out live-demo glassmorphism"
               onClick={() => window.open(demo, '_blank')}
               onMouseOver={() => {
                 document
@@ -98,8 +80,7 @@ const ProjectCard = ({
               <img
                 src={pineapple}
                 alt="pineapple"
-                className="btn-icon sm:w-[34px] sm:h-[34px] 
-                  w-[30px] h-[30px] object-contain"
+                className="w-[30px] sm:w-[34px] h-[30px] sm:h-[34px] object-contain btn-icon"
               />
               LIVE DEMO
             </button>
@@ -120,10 +101,10 @@ const Projects = () => {
         <h2 className={`${styles.sectionHeadTextLight}`}>Projects.</h2>
       </motion.div>
 
-      <div className="w-full flex">
+      <div className="flex w-full">
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
+          className="mt-4 max-w-3xl text-[18px] text-taupe leading-[30px]">
           These projects demonstrate my expertise with practical examples of
           some of my work, including brief descriptions and links to code
           repositories and live demos. They showcase my ability to tackle
@@ -138,7 +119,7 @@ const Projects = () => {
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
         className={`${styles.innerWidth} mx-auto flex flex-col`}>
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
+        <div className="flex lg:flex-row flex-col gap-5 mt-[50px] min-h-[70vh]">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.id}

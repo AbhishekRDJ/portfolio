@@ -42,7 +42,12 @@ import {
   // supabase,
   firebase,
   // postman,
-  cloudinary, github
+  cloudinary, github,
+  GradeVise,
+  finxtapp,
+  Spotify,
+  blogapp,
+  stockpriceproject
 } from '../assets';
 
 export const navLinks = [
@@ -141,116 +146,76 @@ const experiences = [
 const projects = [
   {
     id: 'project-1',
-    name: 'KomiKult',
-    description: 'A comic characters list app that displays Marvel characters.',
+    name: 'GradeVise',
+    description:
+      'An AI-powered academic performance analysis platform that provides personalized guidance based on semester results, integrating Google Vertex AI and Firebase for secure data handling.',
     tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
+      { name: 'flutter', color: 'blue-text-gradient' },
+      { name: 'firebase', color: 'green-text-gradient' },
+      { name: 'vertexai', color: 'pink-text-gradient' },
     ],
-    image: komikult,
-    repo: 'https://github.com/shaqdeff/KomiKult',
-    demo: 'https://shaqdeff.github.io/KomiKult/',
+    image: GradeVise,
+    repo: 'https://github.com/AbhishekRDJ/GradeVise',
+    demo: 'https://github.com/AbhishekRDJ/GradeVise',
   },
   {
     id: 'project-2',
-    name: 'Leaderboard',
+    name: 'FinxtApp CMS Website',
     description:
-      'A leaderboard list app that displays scores submitted by different players.',
+      'A full-stack CMS platform with admin and user panels, built using React, Tailwind, Three.js, Node.js, and MongoDB, streamlining digital content management for FinxtApp.',
     tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'restapi',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'scss',
-        color: 'pink-text-gradient',
-      },
+      { name: 'react', color: 'blue-text-gradient' },
+      { name: 'nodejs', color: 'green-text-gradient' },
+      { name: 'mongodb', color: 'pink-text-gradient' },
     ],
-    image: leaderboard,
-    repo: 'https://github.com/shaqdeff/Leaderboard',
-    demo: 'https://shaqdeff.github.io/Leaderboard/',
+    image: finxtapp,
+    repo: 'https://github.com/AbhishekRDJ/Finxtapp-Admin-side',
+    demo: 'https://finxtapp.vercel.app',
   },
   {
     id: 'project-3',
-    name: 'Math Magicians',
-    description: 'This is a single-page calculator app built with React',
+    name: 'Mega Blog Platform',
+    description:
+      'A modern, feature-rich blogging platform built with React 19 and Vite, featuring Three.js animations, OAuth authentication, Appwrite backend, Redux Toolkit, and a rich text editor with TinyMCE. Includes search & filter, analytics dashboard, dark/light mode, and mobile-first responsive design.',
     tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
+      { name: 'react', color: 'blue-text-gradient' },
+      { name: 'vite', color: 'green-text-gradient' },
+      { name: 'appwrite', color: 'pink-text-gradient' },
     ],
-    image: math,
-    repo: 'https://github.com/shaqdeff/Math-Magicians',
-    demo: 'https://inspiring-medovik-37d3b3.netlify.app/',
+    image: blogapp, // replace with actual image import
+    repo: 'https://github.com/AbhishekRDJ/Mega-Blog-App-Project',
+    demo: 'https://blogspher.netlify.app/',
   },
   {
     id: 'project-4',
-    name: 'Movie Metro',
-    description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
+    name: 'Spotify Clone',
+    description:
+      'A responsive Spotify clone with integrated YouTube API to play unofficial tracks, featuring playlist management and backend playback handling.',
     tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
+      { name: 'nodejs', color: 'blue-text-gradient' },
+      { name: 'express', color: 'green-text-gradient' },
+      { name: 'javascript', color: 'pink-text-gradient' },
     ],
-    image: movie,
-    repo: 'https://github.com/shaqdeff/Movie-Metro',
-    demo: 'https://movie-metro.netlify.app/',
+    image: Spotify,
+    repo: 'https://github.com/AbhishekRDJ/Spotify-Clone',
+    demo: 'https://spotify-clone-amk1.onrender.com/',
   },
   {
     id: 'project-5',
-    name: 'Nyeusi Fest Site',
+    name: 'Stock Price Prediction',
     description:
-      'This is a demo concert website for a music festival called Nyeusi.',
+      'A machine learning-based application predicting the next 30 days of stock prices for MNCs. Built with Python, TensorFlow, and Streamlit, featuring data preprocessing, model training, and interactive real-time prediction visualization.',
     tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
+      { name: 'python', color: 'blue-text-gradient' },
+      { name: 'tensorflow', color: 'green-text-gradient' },
+      { name: 'streamlit', color: 'pink-text-gradient' },
     ],
-    image: nyeusi,
-    repo: 'https://github.com/shaqdeff/Nyeusi-Fest-Site',
-    demo: 'https://shaqdeff.github.io/Nyeusi-Fest-Site/',
+    image: stockpriceproject, // replace with actual image import
+    repo: 'https://github.com/AbhishekRDJ/Stock-Price-Prediction-Using-Machine-Learning',
+    demo: 'https://cbam23fayqugvkbwnwoysg.streamlit.app/',
   },
 ];
+
+
 
 export { services, technologies, experiences, projects };

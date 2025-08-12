@@ -7,7 +7,8 @@ import {
   Navbar,
   Tech,
   Projects,
-  Footer
+  Footer,
+  ContributionGraph
 } from './components';
 
 const App = () => {
@@ -28,6 +29,9 @@ const App = () => {
         </div>
 
         <Projects />
+        <div className="flex justify-center items-center bg-[#141414] p-8 min-h-screen">
+          <ContributionGraph />
+        </div>
 
         <div
           className="bg-experience bg-cover bg-no-repeat bg-center rounded-tl-[150px] rounded-br-[150px]">

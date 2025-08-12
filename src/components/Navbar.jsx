@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { close, menu, logo, logotext, Logo } from '../assets';
+import { close, menu, Logo } from '../assets';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -10,9 +10,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-2 fixed 
-      top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[120vh]`}>
+      className={`${styles.paddingX} w-full flex items-center py-2 fixed top-0 z-20 bg-flashWhite sm:opacity-[0.97]`}
+    >
       <div className="flex justify-between items-center mx-auto w-full max-w-7xl">
+        {/* Logo */}
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -25,74 +26,76 @@ const Navbar = () => {
             <img
               src={Logo}
               alt="logo"
-              className="w-[150px] object-contain scale-120"
+              className="w-[150px] object-contain"
             />
           </div>
-
-
-          {/* if you have text you want besides your logo it comes here.
-          Otherwise delete this if you don't need it. */}
-          {/* <img
-            src={logotext}
-            alt="logo"
-            className="-ml-[0.6rem] w-[85px] sm:w-[90px] h-[85px] sm:h-[90px] object-contain"
-          /> */}
         </Link>
-        <ul className="hidden sm:flex flex-row gap-14 mt-2 list-none">
+
+        {/* Desktop Menu */}
+        <ul className="hidden sm:flex flex-row gap-8 list-none">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${active === nav.title ? 'text-french' : 'text-eerieBlack'
-                } hover:text-taupe text-[21px] font-medium font-mova 
-                uppercase tracking-[3px] cursor-pointer nav-links`}
-              onClick={() => setActive(nav.title)}>
+                } hover:text-taupe text-[18px] font-medium font-mova 
+                uppercase tracking-[2px] cursor-pointer`}
+              onClick={() => setActive(nav.title)}
+            >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
 
-        {/* mobile */}
-        <div className="sm:hidden flex flex-1 justify-end items-center w-screen">
-          {toggle ? (
-            <div
-              className={`p-6 bg-flashWhite opacity-[0.98] absolute  
-                top-0 left-0 w-screen h-[100vh] z-10 menu ${toggle ? 'menu-open' : 'menu-close'
-                }`}>
-              <div className="flex justify-end">
-                <img
-                  src={close}
-                  alt="close"
-                  className="w-[22px] h-[22px] object-contain cursor-pointer"
-                  onClick={() => setToggle(!toggle)}
-                />
-              </div>
-              <ul
-                className="flex flex-col justify-end items-start -gap-[1rem] mt-[10rem] -ml-[35px] list-none">
-                {navLinks.map((nav) => (
-                  <li
-                    id={nav.id}
-                    key={nav.id}
-                    className={`${active === nav.title ? 'text-french' : 'text-eerieBlack'
-                      } text-[88px] font-bold font-arenq 
-                      uppercase tracking-[1px] cursor-pointer`}
-                    onClick={() => {
-                      setToggle(!toggle);
-                      setActive(nav.title);
-                    }}>
-                    <a href={`#${nav.id}`}>{nav.title}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : (
-            <img
-              src={menu}
-              alt="menu"
-              className="w-[34px] h-[34px] object-contain cursor-pointer"
-              onClick={() => setToggle(!toggle)}
-            />
-          )}
+        {/* Mobile Menu Button */}
+        <div className="sm:hidden flex justify-end items-center">
+          <img
+            src={menu}
+            alt="menu"
+            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            onClick={() => setToggle(true)}
+          />
         </div>
+
+        {/* Mobile Menu Overlay */}
+        <div
+          className={`fixed top-0 right-0 h-full w-[70%] max-w-[300px] bg-flashWhite shadow-lg z-50 transform transition-transform duration-300 ${toggle ? 'translate-x-0' : 'translate-x-full'
+            }`}
+        >
+          {/* Close Button */}
+          <div className="flex justify-end p-6">
+            <img
+              src={close}
+              alt="close"
+              className="w-[22px] h-[22px] object-contain cursor-pointer"
+              onClick={() => setToggle(false)}
+            />
+          </div>
+
+          {/* Mobile Nav Links */}
+          <ul className="flex flex-col gap-6 px-6">
+            {navLinks.map((nav) => (
+              <li
+                key={nav.id}
+                className={`${active === nav.title ? 'text-french' : 'text-eerieBlack'
+                  } text-[20px] font-bold font-arenq uppercase cursor-pointer`}
+                onClick={() => {
+                  setToggle(false);
+                  setActive(nav.title);
+                }}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Background Overlay (click to close) */}
+        {toggle && (
+          <div
+            className="z-40 fixed inset-0 bg-black bg-opacity-30"
+            onClick={() => setToggle(false)}
+          ></div>
+        )}
       </div>
     </nav>
   );

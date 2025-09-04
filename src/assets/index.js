@@ -60,18 +60,32 @@ import kelhel from './company/kelhel.png';
 import microverse from './company/microverse.png';
 import FinxtAPP from './company/FinxtAPP.png';
 
-import komikult from './projects/komikult.png';
-import leaderboard from './projects/leaderboard.png';
-import math from './projects/math-magicians.png';
-import movie from './projects/movie-metro.png';
-import nyeusi from './projects/nyeusi.png';
-import space from './projects/space-hub.png';
+
+
 import GradeVise from './projects/GradeVise.png';
 import finxtapp from './projects/finxtapp.png';
 import Spotify from './projects/Spotify.png';
 import blogapp from './projects/blogapp.png';
 import stockpriceproject from './projects/stockpriceproject.png';
+import reactionSpeed from './projects/reactionSpeed.png';
+import readmeViewCounter from './projects/readmeViewCounter.png';
+import ecommerce from './projects/ecommerce.png';
+import shayakai from './projects/shayakai.png';
+import chatapp from './projects/chatapp.png';
+import movie_metro from './projects/movie_metro.png';
+import cricketapp from './projects/cricketapp.png';
+import chess from './projects/chess.png';
+import personalAi from './projects/personalAi.png';
 export {
+  personalAi,
+  chess,
+  cricketapp,
+  movie_metro,
+  chatapp,
+  shayakai,
+  ecommerce,
+  readmeViewCounter,
+  reactionSpeed,
   FinxtAPP,
   stockpriceproject,
   blogapp,
@@ -117,12 +131,6 @@ export {
   redux,
   tailwind,
   typescript,
-  komikult,
-  leaderboard,
-  math,
-  movie,
-  nyeusi,
-  space,
   coverhunt,
   dcc,
   kelhel,

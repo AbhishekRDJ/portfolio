@@ -48,9 +48,10 @@ const Hero = () => {
             <p
               className={`${styles.heroSubText} mt-2 text-eerieBlack text-sm xs:text-base sm:text-lg md:text-xl`}
             >
-              I design and develop user{' '}
+              Turning complex ideas into{' '}
               <br className="hidden sm:block" />
-              interfaces and web applications.
+              clean code and powerful web and apps.
+
             </p>
           </div>
         </div>
